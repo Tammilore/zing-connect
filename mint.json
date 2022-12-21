@@ -1,0 +1,63 @@
+{
+  "name": "Zing",
+  "colors": {
+    "primary": "#6E5899",
+    "light": "#8D81AE",
+    "dark": "#2A186B",
+    "ultraLight": "#E1CFFF",
+    "ultraDark": "#150D31",
+    "anchors": {
+      "from": "#6E5899",
+      "to": "#8D81AE"
+    }
+  },
+  "topbarCtaButton": {
+    "name": "Sign In",
+    "url": "https://app.chainpatrol.io"
+  },
+  "topbarLinks": [
+    {
+      "name": "Request Access",
+      "url": "https://www.zingfi.co"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Home",
+      "icon": "house",
+      "url": "https://www.zingfi.co"
+    },
+    {
+      "name": "See Demo",
+      "icon": "circle-play",
+      "url": "https://www.loom.com/share/23ddc08189514d74aaee943dd33b8e0a"
+    },
+    {
+      "name": "Contact Us",
+      "icon": "envelope",
+      "url": "mailto:tammilore@gmail.com"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "General",
+      "pages": [
+        "general/introduction",
+        "general/how-it-works",
+        "general/concepts",
+        "general/beta"
+      ]
+    },
+    {
+      "group": "Reporting Flow",
+      "pages": [
+        "reporting-flow/overview",
+        "reporting-flow/detect",
+        "reporting-flow/report",
+        "reporting-flow/review",
+        "reporting-flow/protect"
+      ]
+    }
+  ],
+  "backgroundImage": "/background.png"
+}
