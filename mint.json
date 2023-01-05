@@ -12,40 +12,41 @@
     }
   },
   "topbarCtaButton": {
-    "name": "Sign In",
-    "url": "https://app.chainpatrol.io"
+    "name": "Request Access",
+    "url": "https://tally.so/r/mKpkWV"
   },
   "topbarLinks": [
     {
-      "name": "Request Access",
-      "url": "https://www.zingfi.co"
+      "name": "Sign In",
+      "url": "https://zing.typedream.app/connect"
     }
   ],
   "anchors": [
     {
       "name": "Home",
       "icon": "house",
-      "url": "https://www.zingfi.co"
+      "url": "https://zing.typedream.app/connect"
     },
     {
-      "name": "See Demo",
+      "name": "Watch Demo",
       "icon": "circle-play",
       "url": "https://www.loom.com/share/23ddc08189514d74aaee943dd33b8e0a"
     },
     {
       "name": "Contact Us",
       "icon": "envelope",
-      "url": "mailto:tammilore@gmail.com"
+      "url": "mailto:tami@zingfi.co"
     }
   ],
   "navigation": [
     {
-      "group": "General",
+      "group": "Getting Started",
       "pages": [
-        "general/introduction",
-        "general/how-it-works",
-        "general/concepts",
-        "general/beta"
+        "getting-started/introduction",
+        "getting-started/how-zing-works",
+        "getting-started/authentication",
+        "getting-started/error-codes",
+        "getting-started/environments"
       ]
     },
     {
