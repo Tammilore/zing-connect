@@ -43,10 +43,11 @@
     {
       "group": "Getting Started",
       "pages": [
-        "general/introduction",
-        "general/how-it-works",
-        "general/concepts",
-        "general/beta"
+        "getting-started/introduction",
+        "getting-started/how-zing-works",
+        "getting-started/authentication",
+        "getting-started/error-codes",
+        "getting-started/environments"
       ]
     },
     {
