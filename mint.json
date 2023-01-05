@@ -51,13 +51,18 @@
       ]
     },
     {
-      "group": "Reporting Flow",
+      "group": "Solutions",
       "pages": [
-        "reporting-flow/overview",
-        "reporting-flow/detect",
-        "reporting-flow/report",
-        "reporting-flow/review",
-        "reporting-flow/protect"
+        {
+          "group": "Income Verification",
+          "pages": [
+            "solutions/income-verification/scoping",
+            "solutions/income-verification/implementation"
+          ]
+        },
+        "solutions/automated-payments",
+        "solutions/deposit-switcihng",
+        "solutions/earned-wage-access"
       ]
     }
   ],
