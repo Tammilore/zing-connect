@@ -1,5 +1,6 @@
 {
   "name": "Zing",
+  "favicon": "https://res.cloudinary.com/tamilore/image/upload/c_scale,w_32/v1667131166/20221027_144236_0000_d1psjp.png",
   "colors": {
     "primary": "#6E5899",
     "light": "#8D81AE",
@@ -12,35 +13,35 @@
     }
   },
   "topbarCtaButton": {
-    "name": "Sign In",
-    "url": "https://app.chainpatrol.io"
+    "name": "Request Access",
+    "url": "https://tally.so/r/mKpkWV"
   },
   "topbarLinks": [
     {
-      "name": "Request Access",
-      "url": "https://www.zingfi.co"
+      "name": "Sign In",
+      "url": "https://zing.typedream.app/connect"
     }
   ],
   "anchors": [
     {
       "name": "Home",
       "icon": "house",
-      "url": "https://www.zingfi.co"
+      "url": "https://zing.typedream.app/connect"
     },
     {
-      "name": "See Demo",
+      "name": "Watch Demo",
       "icon": "circle-play",
       "url": "https://www.loom.com/share/23ddc08189514d74aaee943dd33b8e0a"
     },
     {
       "name": "Contact Us",
       "icon": "envelope",
-      "url": "mailto:tammilore@gmail.com"
+      "url": "mailto:tami@zingfi.co"
     }
   ],
   "navigation": [
     {
-      "group": "General",
+      "group": "Getting Started",
       "pages": [
         "general/introduction",
         "general/how-it-works",
