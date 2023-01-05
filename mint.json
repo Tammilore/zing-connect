@@ -64,6 +64,13 @@
         "solutions/deposit-switcihng",
         "solutions/earned-wage-access"
       ]
+    },
+    {
+      "group": "Data Management",
+      "pages": [
+        "data-management/data-structure",
+        "data-management/data-retrieval"
+      ]
     }
   ],
   "backgroundImage": "/background.png"
