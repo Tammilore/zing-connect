@@ -60,9 +60,7 @@
             "solutions/income-verification/implementation"
           ]
         },
-        "solutions/automated-payments",
-        "solutions/deposit-switching",
-        "solutions/earned-wage-access"
+        "solutions/automated-payments"
       ]
     },
     {
