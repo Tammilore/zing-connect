@@ -24,11 +24,6 @@
   ],
   "anchors": [
     {
-      "name": "Home",
-      "icon": "house",
-      "url": "https://zing.typedream.app/connect"
-    },
-    {
       "name": "Watch Demo",
       "icon": "circle-play",
       "url": "https://www.loom.com/share/23ddc08189514d74aaee943dd33b8e0a"
