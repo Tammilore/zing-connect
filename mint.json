@@ -23,7 +23,7 @@
   "topbarLinks": [
     {
       "name": "Sign In",
-      "url": "https://zing.typedream.app/connect"
+      "url": "https://console.zingfi.co"
     }
   ],
   "anchors": [
@@ -33,7 +33,7 @@
       "url": "https://www.loom.com/share/23ddc08189514d74aaee943dd33b8e0a"
     },
     {
-      "name": "Pilot Program",
+      "name": "Changelog",
       "icon": "flask",
       "url": "pilot-program"
     },
@@ -52,45 +52,6 @@
         "getting-started/authentication",
         "getting-started/error-codes",
         "getting-started/environments"
-      ]
-    },
-    {
-      "group": "Solutions",
-      "pages": [
-        {
-          "group": "Income Verification",
-          "pages": [
-            "solutions/income-verification/scoping",
-            "solutions/income-verification/implementation"
-          ]
-        },
-        "solutions/automated-payments"
-      ]
-    },
-    {
-      "group": "Using Zing",
-      "pages": [
-        {
-          "group": "Console",
-          "pages": [
-            "using-zing/console/overview",
-            "using-zing/console/playground"
-          ]
-        },
-        {
-          "group": "Link",
-          "pages": [
-            "using-zing/link/overview",
-            "using-zing/link/embed"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Data Management",
-      "pages": [
-        "data-management/data-structure",
-        "data-management/data-retrieval"
       ]
     },
     {
