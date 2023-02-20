@@ -1,0 +1,4 @@
+---
+title: "Unlink Account"
+api: "POST https://api.zingfi.co/connect/{account_id}/unlink"
+---
