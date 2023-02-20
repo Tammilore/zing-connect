@@ -1,6 +1,4 @@
 ---
 title: "Get Employment Data"
-api: "GET https://api.zingfi.co/connect/<ParamField path="user_id" type="string">
-  The id of the user
-</ParamField>/employment"
+api: "GET https://api.zingfi.co/connect/{account_id}/employment"
 ---
