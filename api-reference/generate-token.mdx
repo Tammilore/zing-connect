@@ -9,3 +9,23 @@ authMethod: "none"
 <ParamField query="api_key" type="string" required>
   Copy your API Key from your dashboard
 </ParamField>
+
+<ResponseExample>
+
+```json 200
+{
+  "token": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2Q0JDLUhTNTEyI.....",
+  "expires_in": 3600,
+  "token_type": "Bearer"
+}
+```
+
+```json 403
+{
+  "code": "ERROR_CODE_ACCESS_DENIED",
+  "message": "Invalid API key",
+  "payload": ""
+}
+```
+
+</ResponseExample>
