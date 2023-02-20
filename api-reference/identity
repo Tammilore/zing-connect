@@ -1,4 +1,4 @@
 ---
 title: "Get Identity Data"
-api: "POST https://api.zingfi.co/connect/{account_id}/identity"
+api: "GET https://api.zingfi.co/connect/{account_id}/identity"
 ---
