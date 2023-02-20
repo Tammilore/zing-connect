@@ -92,6 +92,16 @@
         "data-management/data-structure",
         "data-management/data-retrieval"
       ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/generate-token",
+        "api-reference/employment",
+        "api-reference/identity",
+        "api-reference/payslips",
+        "api-reference/unlink-account"
+      ]
     }
   ],
   "backgroundImage": "/background.png"
