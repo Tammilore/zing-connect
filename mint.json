@@ -1,6 +1,10 @@
 {
   "name": "Zing",
   "favicon": "/images/zing logo 32px.png",
+  "api": {
+    "baseUrl": "https://api.zingfi.co/",
+    "auth": { "method": "bearer" }
+  },
   "colors": {
     "primary": "#6E5899",
     "light": "#8D81AE",
