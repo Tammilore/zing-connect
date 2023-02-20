@@ -1,4 +1,5 @@
 ---
-title: "Unlink Account"
+title: "Unlink"
+description: "Unlink a payroll account"
 api: "POST https://api.zingfi.co/connect/{account_id}/unlink"
 ---
