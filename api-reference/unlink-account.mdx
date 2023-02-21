@@ -9,3 +9,20 @@ api: "POST https://api.zingfi.co/connect/{account_id}/unlink"
 <ParamField path="account_id" type="string" required>
   The account_id of the user
 </ParamField>
+
+<ResponseExample>
+
+```json Status 200
+"Account unlinked successfully"
+```
+
+```json Status 404
+{
+  "code": "ERROR_CODE_NOT_FOUND",
+  "message": "This account does not exist",
+  "payload": ""
+}
+```
+
+</ResponseExample>
+
