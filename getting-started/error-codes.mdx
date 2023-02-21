@@ -12,5 +12,10 @@ Zing uses standard HTTP response codes to indicate the success or failure of an
 | Code     | Description                           |
 | -------- | ------------------------------------- |
 | `200 - OK`   | The request was successful                     |
-| Age      | Reported age                          |
-| Joined   | Whether the user joined the community |
+| `400 - Bad Request`      | The request failed as a result of an input error. Check your payload                          |
+| `401 - Unauthorized`   | The token for the request was not provided or has expired |
+| `403 - Forbidden`   | You don't have permission to make this request                     |
+| `404 - Not Found`      | The resource you requested for was not found                          |
+| `429 - Too Many Requests`   | There were too many requests mde all at once |
+| `500 - Unexpected Error`   | Something went wrong on Zing's end |
+
