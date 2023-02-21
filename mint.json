@@ -67,6 +67,32 @@
       ]
     },
     {
+      "group": "Using Zing",
+      "pages": [
+        {
+          "group": "Console",
+          "pages": [
+            "using-zing/console/overview",
+            "using-zing/console/playground"
+          ]
+        },
+        {
+          "group": "Link",
+          "pages": [
+            "using-zing/link/overview",
+            "using-zing/link/embed"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Data Management",
+      "pages": [
+        "data-management/data-structure",
+        "data-management/data-retrieval"
+      ]
+    },
+    {
       "group": "API Reference",
       "pages": [
         "api-reference/generate-token",
