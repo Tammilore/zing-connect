@@ -55,6 +55,17 @@
       ]
     },
     {
+      "group": "Solutions",
+      "pages": [
+        {
+          "group": "Income Verification",
+          "pages": [
+            "solutions/income-verification/scoping",
+            "solutions/income-verification/implementation"
+          ]
+        }
+    },
+    {
       "group": "API Reference",
       "pages": [
         "api-reference/generate-token",
