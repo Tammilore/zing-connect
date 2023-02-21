@@ -9,3 +9,103 @@ api: "GET https://api.zingfi.co/connect/{account_id}/payslips"
 <ParamField path="account_id" type="string" required>
   The account_id of the user
 </ParamField>
+
+## Response Type
+
+<ResponseField name="payment_status" type="string">
+      The user's first name
+    </ResponseField>
+
+    <ResponseField name="type" type="string">
+      The user's last name
+    </ResponseField>
+    
+    <ResponseField name="payday" type="string">
+      The user's gender
+    </ResponseField>
+    
+    <ResponseField name="currency" type="string">
+      The user's phone number
+    </ResponseField>
+
+    <ResponseField name="gross_pay" type="number">
+      The user's email address
+    </ResponseField>
+    
+    <ResponseField name="amount_paid" type="number">
+      The user's bank verification number
+    </ResponseField>
+    
+    <ResponseField name="net_pay" type="number">
+      The user's address
+    </ResponseField>
+    
+    <ResponseExample>
+
+```json Status 200
+{
+  "0": {
+    "payment_status": "success",
+    "type": "once",
+    "payday": "2020-06-28T23:00:00.000Z",
+    "currency": "NGN",
+    "gross_pay": 500000,
+    "amount_paid": 500000,
+    "net_pay": 500000
+  },
+  "1": {
+    "payment_status": "success",
+    "type": "once",
+    "payday": "2020-05-28T23:00:00.000Z",
+    "currency": "NGN",
+    "gross_pay": 80000,
+    "amount_paid": 80000,
+    "net_pay": 80000
+  },
+  "2": {
+    "payment_status": "success",
+    "type": "once",
+    "payday": "2020-04-28T23:00:00.000Z",
+    "currency": "NGN",
+    "gross_pay": 80000,
+    "amount_paid": 80000,
+    "net_pay": 80000
+  },
+  "3": {
+    "payment_status": "success",
+    "type": "once",
+    "payday": "2020-03-28T23:00:00.000Z",
+    "currency": "NGN",
+    "gross_pay": 100000,
+    "amount_paid": 100000,
+    "net_pay": 100000
+  },
+  "4": {
+    "payment_status": "success",
+    "type": "once",
+    "payday": "2020-02-28T23:00:00.000Z",
+    "currency": "NGN",
+    "gross_pay": "100000.000",
+    "amount_paid": 100000,
+    "net_pay": 100000
+  },
+  "5": {
+    "payment_status": "success",
+    "type": "once",
+    "payday": "2020-01-28T23:00:00.000Z",
+    "currency": "NGN",
+    "gross_pay": "20000.000",
+    "amount_paid": 20000,
+    "net_pay": 20000
+    }
+```
+
+```json Status 404
+{
+  "code": "ERROR_CODE_NOT_FOUND",
+  "message": "This account does not exist",
+  "payload": ""
+}
+```
+
+</ResponseExample>
