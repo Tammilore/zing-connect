@@ -9,3 +9,77 @@ api: "GET https://api.zingfi.co/connect/{account_id}/employment"
 <ParamField path="account_id" type="string" required>
   The account_id of the user
 </ParamField>
+
+## Response Fields
+
+<ResponseField name="employer" type="Object">
+  <Expandable title="properties">
+    <ResponseField name="name" type="string">
+      The name of the employer
+    </ResponseField>
+
+    <ResponseField name="email" type="string">
+      The employer's email address
+    </ResponseField>
+
+    <ResponseField name="phone" type="string">
+      The employer's phone number
+    </ResponseField>
+    
+    <ResponseField name="address" type="string">
+      The employer's address
+    </ResponseField>
+    
+    <ResponseField name="city" type="string">
+      City where the employer is located
+    </ResponseField>
+    
+    <ResponseField name="industry" type="string">
+      The employer's industry
+    </ResponseField>
+    
+    <ResponseField name="rcnumber" type="string">
+      The CAC registered number of the company
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="employee" type="Object">
+  <Expandable title="properties">
+    <ResponseField name="salary_account" type="string">
+      The user's bank account for receiving salary
+    </ResponseField>
+
+    <ResponseField name="bank_code" type="string">
+      The bank code for the account
+    </ResponseField>
+
+    <ResponseField name="pay_frequency" type="string">
+      The frequency of salary payment
+    </ResponseField>
+    
+    <ResponseField name="employment_type" type="string">
+      The user's type of employment e.g full-time
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseExample>
+
+```json Status 200
+{
+  "token": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2Q0JDLUhTNTEyI.....",
+  "expires_in": 3600,
+  "token_type": "Bearer"
+}
+```
+
+```json Status 403
+{
+  "code": "ERROR_CODE_ACCESS_DENIED",
+  "message": "Invalid API key",
+  "payload": ""
+}
+```
+
+</ResponseExample>
