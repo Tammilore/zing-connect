@@ -68,16 +68,27 @@ api: "GET https://api.zingfi.co/connect/{account_id}/employment"
 
 ```json Status 200
 {
-  "token": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2Q0JDLUhTNTEyI.....",
-  "expires_in": 3600,
-  "token_type": "Bearer"
-}
+  "employer": {
+    "name": "Pied Piper",
+    "email": "payroll@piedpiper.com",
+    "phone": "701111111111",
+    "address": "Silicon Valley",
+    "city": "California",
+    "industry": "Technology",
+    "rcnumber": "1242022"
+  },
+  "employee": {
+    "salary_account": "2116647671",
+    "bank_code": "058",
+    "pay_frequency": "monthly",
+    "employment_type": "full-time"
+  }
 ```
 
-```json Status 403
+```json Status 404
 {
-  "code": "ERROR_CODE_ACCESS_DENIED",
-  "message": "Invalid API key",
+  "code": "ERROR_CODE_NOT_FOUND",
+  "message": "This account does not exist",
   "payload": ""
 }
 ```
