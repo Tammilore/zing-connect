@@ -13,31 +13,31 @@ api: "GET https://api.zingfi.co/connect/{account_id}/payslips"
 ## Response Type
 
 <ResponseField name="payment_status" type="string">
-      The user's first name
+      Status of the payment
     </ResponseField>
 
     <ResponseField name="type" type="string">
-      The user's last name
+      Frequency of the payment
     </ResponseField>
     
     <ResponseField name="payday" type="string">
-      The user's gender
+      The date payment was made
     </ResponseField>
     
     <ResponseField name="currency" type="string">
-      The user's phone number
+      The currency salary was paid in
     </ResponseField>
 
     <ResponseField name="gross_pay" type="number">
-      The user's email address
+      Total gross pay 
     </ResponseField>
     
     <ResponseField name="amount_paid" type="number">
-      The user's bank verification number
+      The actual amount the user received on the payday
     </ResponseField>
     
     <ResponseField name="net_pay" type="number">
-      The user's address
+      Total net pay
     </ResponseField>
     
     <ResponseExample>
@@ -58,45 +58,45 @@ api: "GET https://api.zingfi.co/connect/{account_id}/payslips"
     "type": "once",
     "payday": "2020-05-28T23:00:00.000Z",
     "currency": "NGN",
-    "gross_pay": 80000,
-    "amount_paid": 80000,
-    "net_pay": 80000
+    "gross_pay": 500000,
+    "amount_paid": 500000,
+    "net_pay": 500000
   },
   "2": {
     "payment_status": "success",
     "type": "once",
     "payday": "2020-04-28T23:00:00.000Z",
     "currency": "NGN",
-    "gross_pay": 80000,
-    "amount_paid": 80000,
-    "net_pay": 80000
+    "gross_pay": 500000,
+    "amount_paid": 500000,
+    "net_pay": 500000
   },
   "3": {
     "payment_status": "success",
     "type": "once",
     "payday": "2020-03-28T23:00:00.000Z",
     "currency": "NGN",
-    "gross_pay": 100000,
-    "amount_paid": 100000,
-    "net_pay": 100000
+    "gross_pay": 500000,
+    "amount_paid": 500000,
+    "net_pay": 500000
   },
   "4": {
     "payment_status": "success",
     "type": "once",
     "payday": "2020-02-28T23:00:00.000Z",
     "currency": "NGN",
-    "gross_pay": "100000.000",
-    "amount_paid": 100000,
-    "net_pay": 100000
+    "gross_pay": "500000.000",
+    "amount_paid": 500000,
+    "net_pay": 500000
   },
   "5": {
     "payment_status": "success",
     "type": "once",
     "payday": "2020-01-28T23:00:00.000Z",
     "currency": "NGN",
-    "gross_pay": "20000.000",
-    "amount_paid": 20000,
-    "net_pay": 20000
+    "gross_pay": "500000.000",
+    "amount_paid": 500000,
+    "net_pay": 500000
     }
 ```
 
