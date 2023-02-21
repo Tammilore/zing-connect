@@ -40,4 +40,27 @@ api: "GET https://api.zingfi.co/connect/{account_id}/identity"
       The employer's address
     </ResponseField>
     
-    
+    <ResponseExample>
+
+```json Status 200
+{
+  first_name: Richard,
+  last_name: Hendricks,
+  gender: male,
+  phone: 07046285308,
+  email: richardhendricks@gmail.com,
+  bvn: 22145678900,
+  address: 2, Aviato Street
+}
+```
+
+```json Status 404
+{
+  "code": "ERROR_CODE_NOT_FOUND",
+  "message": "This account does not exist",
+  "payload": ""
+}
+```
+
+</ResponseExample>
+
