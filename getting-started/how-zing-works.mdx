@@ -6,7 +6,7 @@ Zing provides access to payroll data (income, identity and employment) in real t
 
 ## Connect to a payroll account
 
-Start by accessing your **Zing Link** on the Console. This link takes care of everything from requesting and informing your users about consent to access their data, authentication, credential verification and handling errors from all the providers available on Zing.
+Start by accessing your [Zing Link](https://console.zingfi.co/link) on the Console. This link provies a widget takes care of everything from requesting and informing your users about consent to access their data, authentication, credential verification and handling errors from all the providers available on Zing.
 
 ![Diagram highlighting the user flow of Zing Link](/images/zing-steps-1.png)
 
@@ -16,15 +16,19 @@ We’ve designed Link so it can be easily embedded into any part of your applica
 
 ## Fetch payroll data
 
-On Zing, you can retrieve income and employment data shared by your customers by using the API or you can access the data through the [Playground](https://zingfi.co) which is essentially a no-code way for you to be able to view and manage your data on your dashboard.
+On Zing, you can retrieve income and employment data shared by your customers by using the API or you can access the data through the [Playground](https://console.zingfi.co/playground) which is a no-code way for you to be able to view and manage your data on your dashboard.
 
 ### Using the playground
 
-Zing simplifies the payroll process by providing each company with a dedicated wallet for storing payroll funds, calculating the net salary of each employee, all company benefits, taxes and fees and then making payment to all parties and remitting tax. This can either be on a specific day set as payday by the company or when the company runs the payroll manually.
+To use the Playground, simply navigate to the page on the Console. There you will find a preview of the link widget as well as test credentials for testing in sandbox environment and a way for you to run requests directly from your account. With the playground, all you need to do is provide the `account_id` of the user and select what data you want to fetch. The request is then generated for you and the results displayed on the page. No-code required.
 
 ### Using the API
 
-Zing simplifies the payroll process by providing each company with a dedicated wallet for storing payroll funds, calculating the net salary of each employee, all company benefits, taxes and fees and then making payment to all parties and remitting tax. This can either be on a specific day set as payday by the company or when the company runs the payroll manually.
+To use the API, you can find the different endpoints under the [API Reference](/api-reference/generate-token) in this doc. To run all requests, you must first generate a token using the token endpoint.
+
+```
+https://api.zingfi.co/token
+```
 
 ## Manage data and access
 
