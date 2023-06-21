@@ -1,19 +1,32 @@
 ---
 title: Identity
-description: There are four steps to reporting a scam on ChainPatrol
+description: Get data on the customer's identity
 ---
 
-<CardGroup cols={2}>
-  <Card title="Detect" icon="square-1" color="#ea5a0c" href="/reporting-flow/detect">
-    We help you detect scams and impersonation attacks targeting your organization
-  </Card>
-  <Card title="Report" icon="square-2" color="#0285c7" href="/reporting-flow/report">
-    You and your community can report scams and impersonation attacks
-  </Card>
-  <Card title="Review" icon="square-3" color="#16a34a" href="/reporting-flow/review">
-    We review all reports to make sure they are valid and not false positives
-  </Card>
-  <Card title="Protect" icon="square-4" color="#dc2626" href="/reporting-flow/protect">
-    We send the reports to wallets and security apps to block the reported URLs and Addresses
-  </Card>
-</CardGroup>
+## Identity Verification
+
+The Identity Verification endpoint provides a range of fields to verify user identities, supporting KYC (Know Your Customer) processes and user verification. This endpoint can be utilized to auto-complete account data, aid in fraud reduction, and gather personal information such as the user's full name, email address, phone number, gender, date of birth, and Bank Verification Number (BVN). These details assist in identifying users associated with specific financial institutions.
+
+```javascript
+{
+  "first_name": "Richard",
+  "last_name": "Hendricks",
+  "gender": "male",
+  "phone": "09055442289",
+  "email": "richardhendricks@gmail.com",
+  "bvn": "22134567890",
+  "address": "4a, Aviato Close"
+  }
+```
+
+### Identity Fields
+
+| Field          | Description                                          | Type   |
+|----------------|------------------------------------------------------|--------|
+| first_name     | The customer's first name.                           | string |
+| last_name      | The customer's last name.                            | string |
+| gender         | Gender of the customer.                              | string |
+| phone          | Phone number of the customer.                        | string |
+| email          | Email address of the customer.                       | string |
+| bvn            | Bank Verification Number of the customer.            | string |
+| address        | Full home address of the customer.                   | string |
