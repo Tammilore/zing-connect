@@ -95,8 +95,11 @@
     },
     {
       "group": "Overview",
-      "pages": ["api-reference/quickstart", "api-reference/implementation"]
-        },
+      "pages": [
+        "api-reference/quickstart", 
+        "api-reference/implementation"
+      ]
+    },
     {
       "group": "Financial Data",
       "pages": [
