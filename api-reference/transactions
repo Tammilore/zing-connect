@@ -1,0 +1,104 @@
+---
+title: "Transactions"
+description: "Get transactions data"
+api: "GET /connect/{account_id}/transactions"
+---
+
+## Parameters
+
+<ParamField path="account_id" type="string" required>
+  The account_id of the user
+</ParamField>
+
+<ParamField query="start_date" type="string" placeholder="2023-05-23" required>
+  Start date you want transactions from
+</ParamField>
+
+<ParamField query="end_date" type="string" placeholder="2023-05-29" required>
+  End date you want transactions from
+</ParamField>
+
+## Response Fields
+
+<ResponseField name="employer" type="Object">
+  <Expandable title="properties">
+    <ResponseField name="name" type="string">
+      The name of the employer
+    </ResponseField>
+
+    <ResponseField name="email" type="string">
+      The employer's email address
+    </ResponseField>
+
+    <ResponseField name="phone" type="string">
+      The employer's phone number
+    </ResponseField>
+    
+    <ResponseField name="address" type="string">
+      The employer's address
+    </ResponseField>
+    
+    <ResponseField name="city" type="string">
+      City where the employer is located
+    </ResponseField>
+    
+    <ResponseField name="industry" type="string">
+      The employer's industry
+    </ResponseField>
+    
+    <ResponseField name="rcnumber" type="string">
+      The CAC registered number of the company
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="employee" type="Object">
+  <Expandable title="properties">
+    <ResponseField name="salary_account" type="string">
+      The user's bank account for receiving salary
+    </ResponseField>
+
+    <ResponseField name="bank_code" type="string">
+      The bank code for the account
+    </ResponseField>
+
+    <ResponseField name="pay_frequency" type="string">
+      The frequency of salary payment
+    </ResponseField>
+    
+    <ResponseField name="employment_type" type="string">
+      The user's type of employment e.g full-time
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseExample>
+
+```json Status 200
+{
+  "employer": {
+    "name": "Pied Piper",
+    "email": "payroll@piedpiper.com",
+    "phone": "701111111111",
+    "address": "Silicon Valley",
+    "city": "California",
+    "industry": "Technology",
+    "rcnumber": "1242022"
+  },
+  "employee": {
+    "salary_account": "2116647671",
+    "bank_code": "058",
+    "pay_frequency": "monthly",
+    "employment_type": "full-time"
+  }
+```
+
+```json Status 404
+{
+  "code": "ERROR_CODE_NOT_FOUND",
+  "message": "This account does not exist",
+  "payload": ""
+}
+```
+
+</ResponseExample>
