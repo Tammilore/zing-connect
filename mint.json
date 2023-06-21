@@ -107,7 +107,9 @@
         "api-reference/employment",
         "api-reference/identity",
         "api-reference/payslips",
-        "api-reference/unlink-account"
+        "api-reference/unlink-account",
+        "api-reference/account",
+        "api-reference/transactions"
       ]
     }
   ],
