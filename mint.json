@@ -58,16 +58,11 @@
       ]
     },
     {
-      "group": "Solutions",
+      "group": "Zing Data",
       "pages": [
-        {
-          "group": "Income Verification",
-          "pages": [
-            "solutions/income-verification/scoping",
-            "solutions/income-verification/implementation"
+        "zing-data/identity",
+        "zing-data/transactions"
           ]
-        }
-      ]
     },
     {
       "group": "Using Zing",
