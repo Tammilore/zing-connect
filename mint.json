@@ -2,7 +2,7 @@
   "name": "Zing",
   "favicon": "/images/zing logo 32px.png",
   "api": {
-    "baseUrl": "https://api.zingfi.co/",
+    "baseUrl": ["https://api.zingfi.co/", "https://api-sandbox.zingfi.co/"]
     "auth": { "method": "bearer" }
   },
   "colors": {
@@ -17,30 +17,33 @@
     }
   },
   "topbarCtaButton": {
-    "name": "Request Access",
-    "url": "https://tally.so/r/mKpkWV"
+    "name": "Go to Console",
+    "url": "https://console.zingfi.co"
   },
   "topbarLinks": [
     {
-      "name": "Sign In",
-      "url": "https://console.zingfi.co"
+      "name": "Request Access",
+      "url": "https://tally.so/r/mKpkWV"
     }
   ],
+  "topAnchor": {
+        "name": "Guides"
+    },
   "anchors": [
     {
-      "name": "Watch Demo",
-      "icon": "circle-play",
-      "url": "https://www.loom.com/share/23ddc08189514d74aaee943dd33b8e0a"
+      "name": "API Reference",
+      "icon": "book",
+      "url": "api-reference"
     },
     {
       "name": "Changelog",
       "icon": "list",
-      "url": "pilot-program"
+      "url": "https://zing.olvy.co/"
     },
     {
-      "name": "Contact Us",
-      "icon": "envelope",
-      "url": "mailto:tami@zingfi.co"
+      "name": "Zing Link Demo",
+      "icon": "circle-play",
+      "url": "https://demo.zingfi.co/?uuid=1234"
     }
   ],
   "navigation": [
