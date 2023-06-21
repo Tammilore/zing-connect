@@ -61,7 +61,10 @@
       "group": "Zing Data",
       "pages": [
         "zing-data/identity",
-        "zing-data/transactions"
+        "zing-data/transactions",
+        "zing-data/income",
+        "zing-data/account-check",
+        "zing-data/investments"
           ]
     },
     {
@@ -91,7 +94,11 @@
       ]
     },
     {
-      "group": "API Reference",
+      "group": "Overview",
+      "pages": ["api-reference/quickstart", "api-reference/implementation"]
+        },
+    {
+      "group": "Financial Data",
       "pages": [
         "api-reference/generate-token",
         "api-reference/employment",
