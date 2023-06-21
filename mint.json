@@ -2,7 +2,7 @@
   "name": "Zing",
   "favicon": "/images/zing logo 32px.png",
   "api": {
-    "baseUrl": ["https://api.zingfi.co/", "https://api-sandbox.zingfi.co/"],
+    "baseUrl": ["https://api.zingfi.co", "https://api-sandbox.zingfi.co"],
     "auth": { "method": "bearer" }
   },
   "colors": {
