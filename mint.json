@@ -95,7 +95,8 @@
     },
     {
       "group": "Overview",
-      "pages": [ 
+      "pages": [
+        "api-reference/start-here",
         "api-reference/implementation"
       ]
     },
