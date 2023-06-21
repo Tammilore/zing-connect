@@ -95,8 +95,7 @@
     },
     {
       "group": "Overview",
-      "pages": [
-        "api-reference/quickstart", 
+      "pages": [ 
         "api-reference/implementation"
       ]
     },
