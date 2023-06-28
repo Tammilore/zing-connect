@@ -7,7 +7,7 @@
   },
   "modeToggle": {
   "default": "dark",
-  "isHidden": true
+  "isHidden": false
 },
   "colors": {
     "primary": "#6E5899",
@@ -118,5 +118,9 @@
       ]
     }
   ],
+  "footerSocials": {
+    "website": "https://www.zingfi.co"
+    "twitter": "https://twitter.com/zingfi"
+  },
   "backgroundImage": "/background.png"
 }
