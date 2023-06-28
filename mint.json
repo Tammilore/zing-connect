@@ -5,6 +5,10 @@
     "baseUrl": ["https://api.zingfi.co", "https://api-sandbox.zingfi.co"],
     "auth": { "method": "bearer" }
   },
+  "modeToggle": {
+  "default": "dark",
+  "isHidden": true
+}
   "colors": {
     "primary": "#6E5899",
     "light": "#8D81AE",
