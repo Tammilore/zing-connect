@@ -7,7 +7,7 @@
   },
   "feedback": {
     "suggestEdit": false,
-    "raiseIssue": true
+    "raiseIssue": false
   },
   "modeToggle": {
   "default": "dark",
