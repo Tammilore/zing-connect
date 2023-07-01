@@ -1,39 +1,24 @@
 ---
 title: Overview
+description: An intro to Zing's Connect Widget
 ---
 
-Zing provides access to payroll data (income, identity and employment) in real time by allowing users sign into their payroll account and share their data with verified businesses. Here’s an overview on how Zing is implemented:
+Zing provides access to financial data like account details, transaction history, income, identity and employment in real time by allowing users sign into their preferred accounts via our simple no-code widget and share their data with your business. 
 
-## Connect to a payroll account
+Here’s a summary of what happens:
 
-Start by accessing your [Zing Link](https://console.zingfi.co/link) on the Console. This link provies a widget takes care of everything from requesting and informing your users about consent to access their data, authentication, credential verification and handling errors from all the providers available on Zing.
+Your customer selects a provider type and authorizes access to his account. We immediately pull data from the connected account depending on what provider type was selected; whether bank, payroll, crypto, wallets and then send you a webhook notification within 1 - 3 minutes.
 
-![Diagram highlighting the user flow of Zing Link](/images/zing-steps-1.png)
-
-We’ve designed Link so it can be easily embedded into any part of your application. You can equally share share it directly with your users by sending them the URL.
-
-<Note>Check out the [Link overview](/using-zing/link/overview) to learn more about how your users can securely connect their payroll accounts.</Note>
-
-## Fetch payroll data
-
-On Zing, you can retrieve income and employment data shared by your customers by using the API or you can access the data through the [Playground](https://console.zingfi.co/playground) which is a no-code way for you to be able to view and manage your data on your dashboard.
-
-### Using the playground
-
-To use the Playground, simply navigate to the page on the Console. There you will find a preview of the link widget as well as test credentials for testing in sandbox environment and a way for you to run requests directly from your account. With the playground, all you need to do is provide the `account_id` of the user and select what data you want to fetch. The request is then generated for you and the results displayed on the page. No-code required.
-
-### Using the API
-
-To use the API, you can find the different endpoints under the [API Reference](/api-reference/generate-token) in this doc. To run all requests, you must first generate a token using the token endpoint.
-
+```javascript ACCOUNT_CONNECTED
+{
+  "event": "ACCOUNT_CONNECTED".
+  "data": {
+            "account_id": "4cc7dd22-4a3e-430d-8419-8c2a1d69d12e",
+            "name": "Ololade Daniels",
+            "provider": "bento",
+            "type": "payroll",
+            "created_at": "2023-07-01 00:00:00"
+  }
+}
 ```
-https://api.zingfi.co/token
-```
-
-## Manage data and access
-
-### Syncing data
-
-
-### Revoked access
-
+The webhook object contains the `account_id` of the newly made connection which you can use to call any of our other endpoints and fetch data on the user.
