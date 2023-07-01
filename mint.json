@@ -71,8 +71,7 @@
         "zing-data/identity",
         "zing-data/transactions",
         "zing-data/income",
-        "zing-data/account-check",
-        "zing-data/investments"
+        "zing-data/account-check"
           ]
     },
     {
