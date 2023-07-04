@@ -75,22 +75,35 @@ api: "GET /connect/{account_id}/transactions"
 <ResponseExample>
 
 ```json Status 200
-{
-  "employer": {
-    "name": "Pied Piper",
-    "email": "payroll@piedpiper.com",
-    "phone": "701111111111",
-    "address": "Silicon Valley",
-    "city": "California",
-    "industry": "Technology",
-    "rcnumber": "1242022"
+[
+  {
+    "id":"96df2fcc-a5f4-4164-b048-33e0652ad93a",
+    "date":"10-06-2023 12:17:40",
+    "type":"debit",
+    "amount":6500,
+    "balance":5500,
+    "currency":"NGN",
+    "narration":"PACK OF GUMMY BEARS"
   },
-  "employee": {
-    "salary_account": "2116647671",
-    "bank_code": "058",
-    "pay_frequency": "monthly",
-    "employment_type": "full-time"
+  {
+    "id":"e735682c-058d-48db-af43-d8cdc24fc2df",
+    "date":"10-06-2023 11:53:40",
+    "type":"debit",
+    "amount":7000,
+    "balance":12000,
+    "currency":"NGN",
+    "narration":"DODO PIZZA SUMN SUMN"
+  },
+  {
+    "id":"914154bd-e5fd-48e0-82cb-1bd3df44cb22",
+    "date":"10-06-2023 11:29:40",
+    "type":"credit",
+    "amount":12500,
+    "balance":19000,
+    "currency":"NGN",
+    "narration":"STUFF N STUFF"
   }
+]
 ```
 
 ```json Status 404
