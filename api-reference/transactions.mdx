@@ -20,58 +20,34 @@ api: "GET /connect/{account_id}/transactions"
 
 ## Response Fields
 
-<ResponseField name="employer" type="Object">
-  <Expandable title="properties">
-    <ResponseField name="name" type="string">
-      The name of the employer
+<ResponseField name="id" type="string">
+      Transaction ID
     </ResponseField>
 
-    <ResponseField name="email" type="string">
-      The employer's email address
-    </ResponseField>
-
-    <ResponseField name="phone" type="string">
-      The employer's phone number
+    <ResponseField name="date" type="string">
+      Date of the transaction
     </ResponseField>
     
-    <ResponseField name="address" type="string">
-      The employer's address
+    <ResponseField name="type" type="string">
+      Transaction type, whether credit or debit
     </ResponseField>
     
-    <ResponseField name="city" type="string">
-      City where the employer is located
+    <ResponseField name="amount" type="number">
+      The transaction amount
+    </ResponseField>
+
+    <ResponseField name="balance" type="number">
+      Account balance after transaction
     </ResponseField>
     
-    <ResponseField name="industry" type="string">
-      The employer's industry
+    <ResponseField name="currency" type="string">
+      The currency the transaction was made in
     </ResponseField>
     
-    <ResponseField name="rcnumber" type="string">
-      The CAC registered number of the company
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="employee" type="Object">
-  <Expandable title="properties">
-    <ResponseField name="salary_account" type="string">
-      The user's bank account for receiving salary
-    </ResponseField>
-
-    <ResponseField name="bank_code" type="string">
-      The bank code for the account
-    </ResponseField>
-
-    <ResponseField name="pay_frequency" type="string">
-      The frequency of salary payment
+    <ResponseField name="narration" type="string">
+      Details or description of the transaction
     </ResponseField>
     
-    <ResponseField name="employment_type" type="string">
-      The user's type of employment e.g full-time
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
 <ResponseExample>
 
 ```json Status 200
