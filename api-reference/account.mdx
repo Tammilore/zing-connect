@@ -12,54 +12,42 @@ api: "GET /connect/{account_id}/account"
 
 ## Response Fields
 
-<ResponseField name="employer" type="Object">
+<ResponseField name="account" type="Object">
   <Expandable title="properties">
+    <ResponseField name="bank" type="Object">
+  <Expandable title="properties">
+    <ResponseField name="code" type="string">
+      The bank code for the account
+    </ResponseField>
+
     <ResponseField name="name" type="string">
-      The name of the employer
+      The name of the bank
     </ResponseField>
 
-    <ResponseField name="email" type="string">
-      The employer's email address
-    </ResponseField>
-
-    <ResponseField name="phone" type="string">
-      The employer's phone number
-    </ResponseField>
-    
-    <ResponseField name="address" type="string">
-      The employer's address
-    </ResponseField>
-    
-    <ResponseField name="city" type="string">
-      City where the employer is located
-    </ResponseField>
-    
-    <ResponseField name="industry" type="string">
-      The employer's industry
-    </ResponseField>
-    
-    <ResponseField name="rcnumber" type="string">
-      The CAC registered number of the company
+    <ResponseField name="type" type="string">
+      The type of bank
     </ResponseField>
   </Expandable>
 </ResponseField>
 
-<ResponseField name="employee" type="Object">
-  <Expandable title="properties">
-    <ResponseField name="salary_account" type="string">
-      The user's bank account for receiving salary
+    <ResponseField name="name" type="string">
+      The name of the account holder
     </ResponseField>
 
-    <ResponseField name="bank_code" type="string">
-      The bank code for the account
-    </ResponseField>
-
-    <ResponseField name="pay_frequency" type="string">
-      The frequency of salary payment
+    <ResponseField name="type" type="string">
+      The type of the bank account connected
     </ResponseField>
     
-    <ResponseField name="employment_type" type="string">
-      The user's type of employment e.g full-time
+    <ResponseField name="balance" type="integer">
+      User's account balance
+    </ResponseField>
+    
+    <ResponseField name="currency" type="string">
+      Currency of the connected account
+    </ResponseField>
+  
+    <ResponseField name="account_number" type="string">
+      Account number of the user
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -68,21 +56,18 @@ api: "GET /connect/{account_id}/account"
 
 ```json Status 200
 {
-  "employer": {
-    "name": "Pied Piper",
-    "email": "payroll@piedpiper.com",
-    "phone": "701111111111",
-    "address": "Silicon Valley",
-    "city": "California",
-    "industry": "Technology",
-    "rcnumber": "1242022"
-  },
-  "employee": {
-    "salary_account": "2116647671",
-    "bank_code": "058",
-    "pay_frequency": "monthly",
-    "employment_type": "full-time"
-  }
+  "account":{
+      "bank":{
+          "code":"035",
+          "name":"Wema Bank",
+          "type":"PERSONAL BANKING"
+},
+  "name":"Ololade Daniels",
+  "type":"SAVINGS ACCOUNT",
+  "balance":5500,
+  "currency":"NGN",
+  "account_number":"0000049358"
+}}
 ```
 
 ```json Status 404
