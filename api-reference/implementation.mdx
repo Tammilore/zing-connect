@@ -18,6 +18,24 @@ We’ve designed the link so it can be easily embedded into any part of your app
 
 ## Step 2: Listen for new connections via webhook
 
+Once a user connects their account, Zing will send you a webhook event for `ACCOUNT_CONNECTED` within the first one to three minutes. The event will include the `account_id` for the connection as well as some basic details of the user who just made the connection. You can take the id and save it in your database.
+
+## Step 3: Fetch financial data
+
+Now that you have the `account_id`, you can call any of the API endpoints to get data on your users. There is no expiry date for the `account_id` so as long as it is saved on your end, you can use it at anytime to fetch data that you want. However it is important to note that data you fetch is dependent on the data source or account your user has connected.
+
+**Data Sources**
+
+One of the things that differentiates Zing from other players in the open banking industry is that we provide multiple sources of financial data for both you and your users. Currently Zing supports the following sources:
+
+| Sources | Status | Data Endpoints |
+| --- | --- | --- |
+| Banks | Available | Account Details Transactions Identity  |
+| Payroll | Available | Identity Payslip Employment |
+| Wallets | Coming Soon | Account Details Transactions Identity  |
+| Investments | Coming Soon | Account Details Transactions Identity Assets Earnings |
+| Crypto | Coming Soon | Account Details Transactions Identity Assets Earnings |
+
 <Warning>
 
 **We are still working on this page!**
