@@ -3,11 +3,11 @@ title: Overview
 description: Get started with Zing's extractor
 ---
 
-Zing provides access to financial data like account details, transaction history, income, identity and employment in real time by allowing users sign into their preferred accounts via our simple no-code widget and share their data with your business. 
+Zing Extract is our tool that allows businesses accept manual uploads of bank statements and the likes from their customers who prefer not to link their financial accounts via the Connect Widget.
 
-Here’s a summary of what happens:
+Here’s how it works:
 
-Your customer selects a provider type and authorizes access to his account. We immediately pull data from the connected account depending on what provider type was selected; whether bank, payroll, crypto, wallets and then send you a webhook notification within 1 - 3 minutes.
+## Step 1: Run the extract endpoint
 
 ```javascript ACCOUNT_CONNECTED
 {
@@ -21,4 +21,15 @@ Your customer selects a provider type and authorizes access to his account. We i
   }
 }
 ```
-The webhook object contains the `account_id` of the newly made connection which you can use to call any of our other endpoints and fetch data on the user.
+
+## Step 2: Fetch the job
+
+Get the job-id from the previous request and use it to run this endpoint. There are three possible responses you could get depending on the status of the job. If the job is complete, you’ll get the full data extracted from the uploaded bank statement or payslip. If the job is still running, we’ll let you know and you’ll need to check back in a few seconds, however, this hardly happens. On the very rare occasion that your extraction failed, we’ll let you know as well. If your extraction fails, this could be as a result of an invalid file format or files larger than we currently allow.
+
+### Extracted Data
+
+Extracted data may differ slightly across providers types but they are largely similar. For example, while a Kuda Bank extracted data might include transaction category and extracted data from GTBank does not, you can be sure that they both have similar data like `account_name`, `account_number`, `credit` etc. 
+
+You can call the endpoint to retrieve a job as many times as you like without charge. We only charge you when make a request to extract data from a document. 
+
+If you would like to try out Zing Extract, please sign up [here](https://tally.so/r/mKpkWV) or email [hello@zingfi.co](mailto:hello@zingfi.co). We’re giving out your first 500 pages free of charge.
