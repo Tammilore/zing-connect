@@ -75,6 +75,14 @@
           ]
     },
     {
+      "group": "Zing Extract",
+      "pages": [
+        "zing-extract/overview",
+        "zing-extract/bank-statements",
+        "zing-extract/payslips"
+          ]
+    },
+    {
       "group": "Using Zing",
       "pages": [
         {
