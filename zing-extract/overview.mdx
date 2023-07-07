@@ -1,1 +1,24 @@
+---
+title: Overview
+description: Get started with Zing's extractor
+---
 
+Zing provides access to financial data like account details, transaction history, income, identity and employment in real time by allowing users sign into their preferred accounts via our simple no-code widget and share their data with your business. 
+
+Here’s a summary of what happens:
+
+Your customer selects a provider type and authorizes access to his account. We immediately pull data from the connected account depending on what provider type was selected; whether bank, payroll, crypto, wallets and then send you a webhook notification within 1 - 3 minutes.
+
+```javascript ACCOUNT_CONNECTED
+{
+  "event": "ACCOUNT_CONNECTED".
+  "data": {
+            "account_id": "4cc7dd22-4a3e-430d-8419-8c2a1d69d12e",
+            "name": "Ololade Daniels",
+            "provider": "bento",
+            "type": "payroll",
+            "created_at": "2023-07-01 00:00:00"
+  }
+}
+```
+The webhook object contains the `account_id` of the newly made connection which you can use to call any of our other endpoints and fetch data on the user.
