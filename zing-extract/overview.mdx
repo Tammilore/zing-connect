@@ -6,24 +6,43 @@ Zing Extract is our tool that allows businesses accept manual uploads of bank st
 
 Here’s how it works:
 
-## Step 1: Run the extract endpoint
+## Step 1: Call the extract endpoint
 
-```javascript ACCOUNT_CONNECTED
-{
-  "event": "ACCOUNT_CONNECTED".
-  "data": {
-            "account_id": "4cc7dd22-4a3e-430d-8419-8c2a1d69d12e",
-            "name": "Ololade Daniels",
-            "provider": "bento",
-            "type": "payroll",
-            "created_at": "2023-07-01 00:00:00"
-  }
-}
+To run this endpoint, you only need the `base64_string` of the pdf file as well as the `code` for the provider the document was generated from. Eg If a bank statement was generated from Access Bank, you would need to provide the code for Access Bank. You can find the endpoint to fetch the full list of providers we currently support and their codes from the [API Reference](/api-reference/start-here).
+
 ```
+curl -X 'POST' \
+'https://api.zingfi.co/extract/start' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Bearer <token>' \
+--data '{"base64_string":"JVBERi0xLjQKMSAw...","code":"044"}'
+```
+
+Once you call the endpoint, Zing starts a job and begins the extraction process. We then provide you with the `job-id` which you'll need for the next step.
 
 ## Step 2: Fetch the job
 
-Get the `job-id` from the previous request and use it to run this endpoint. There are three possible responses you could get depending on the status of the job. If the job is complete, you’ll get the full data extracted from the uploaded bank statement or payslip. If the job is still running, we’ll let you know and you’ll need to check back in a few seconds, however, this hardly happens. On the very rare occasion that your extraction failed, we’ll let you know as well. If your extraction fails, this could be as a result of an invalid file format or files larger than we currently allow.
+Use the `job-id` from the previous request to get the data extracted. There are three possible responses you could get depending on the status of the job. If the job is complete, you’ll get the full data extracted from the uploaded bank statement or payslip. If the job is still running, you’ll need to check back in a few seconds but this hardly happens. On the very rare occasion that your extraction failed, we’ll let you know as well. If your extraction fails, this could be as a result of an invalid file format or files larger than we currently allow. See [limitations](/zing-extract/limitations) for more details.
+
+<CodeGroup>
+
+```javascript Response - COMPLETED
+{"date":"Tuesday, March 28, 2023 to Sunday, April 30, 2023","balance":685.24,"total_debit":1092652.71,"account_name":"OLUWATAMILORE OLUBUKOLA LAWAL","total_credit":1093204.96,"transactions":[{"date":"28-MAR-23","debit":0,"credit":4000,"balance":4132.99,"narration":"ABDULLAHI SEMIRAH AJUMAH/Transfer from ABDULLAHI SEMIRAH AJUMAH to OLUWATAMILORE OLUBUKOLA LAWAL"},{"date":"31-MAR-23","debit":0.4,"credit":0,"balance":4132.59,"narration":"WHT ON CREDIT INTEREST"},{"date":"31-MAR-23","debit":0,"credit":3.96,"balance":4136.55,"narration":"CREDIT INTEREST CAPITALIZATION"},{"date":"03-APR-23","debit":0,"credit":375,"balance":4511.55,"narration":"RIA/USD75.00/ACCOUNT/OLUWATAMILORE OLUBUKOLA LAWAL/CA66114219"},{"date":"04-APR-23","debit":0,"credit":1000000,"balance":1004511.55,"narration":"OLUWATAMILORE LAWAL/SAVINGS"},{"date":"10-APR-23","debit":4010.75,"credit":0,"balance":447.05,"narration":"TRF//FRM OLUWATAMILORE OLUBUKOLA LAWAL TO OLUWATAMILORE LAWAL- 611"},{"date":"20-APR-23","debit":0,"credit":375.05,"balance":698.71,"narration":"RIA/ACCOUNT/USD/75.01/CA208727719/OLUWATAMILORE O"},{"date":"25-APR-23","debit":32,"credit":0,"balance":666.71,"narration":"SMS Alert Fee-24/03-23/04/2023"},{"date":"30-APR-23","debit":2.06,"credit":0,"balance":664.65,"narration":"WHT ON CREDIT INTEREST"},{"date":"30-APR-23","debit":0,"credit":20.59,"balance":685.24,"narration":"CREDIT INTEREST CAPITALIZATION"}],"account_number":"0733719358"}
+```
+
+```javascript Response - RUNNING
+{
+  "message": "This job is still running. Please check back in a few seconds"
+}
+```
+
+```javascript Response - FAILED
+{
+  "message": "This job failed. Please try starting another job"
+}
+```
+
+</CodeGroup>
 
 ### Extracted Data
 
