@@ -7,17 +7,52 @@ api: "GET https://api.zingfi.co/extract/{job_id}"
 ## Parameters
 
 <ParamField path="job_id" type="string" required>
-  The base 64 string of the document
+  The job_id for the document
 </ParamField>
 
 
 <ResponseExample>
 
-```json Status 200
+```json Response - COMPLETED (Access Bank)
 {
-  "message": "Document processing started",
-  "status": "STARTED",
-  "job_id": "2f546..."
+  "date":"Tuesday, March 28, 2023 to Sunday, April 30, 2023",
+  "balance":685.24,
+  "total_debit":1092652.71,
+  "account_name":"OLUWATAMILORE ...",
+  "total_credit":1093204.96,
+  "transactions":[
+            {
+              "date":"28-MAR-23",
+              "debit":0,
+              "credit":4000,
+              "balance":4132.99,
+             "narration":"Transfer from SEMIRAH AJUMAH to OLUWATAMILORE"
+           },
+           {
+             "date":"31-MAR-23",
+             "debit":0.4,
+             "credit":0,
+             "balance":4132.59,
+             "narration":"WHT ON CREDIT INTEREST"
+           },
+           {
+             "date":"31-MAR-23",
+             "debit":0,
+             "credit":3.96,
+             "balance":4136.55,
+             "narration":"CREDIT INTEREST CAPITALIZATION"
+          },
+          {
+            "date":"03-APR-23",
+            "debit":0,
+            "credit":375,
+            "balance":4511.55,
+            "narration":"RIA/USD75.00/ACCOUNT/OLUWATAMILORE/CA66114219"
+          },
+          ...
+          ...
+              ],
+    "account_number":"07337...."
 }
 ```
 
