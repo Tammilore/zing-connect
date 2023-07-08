@@ -129,6 +129,14 @@
         "api-reference/transactions",
         "api-reference/unlink-account"
       ]
+    },
+    {
+      "group": "Extraction",
+      "pages": [
+        "api-reference/create-extraction-job",
+        "api-reference/get-extraction-job",
+        "api-reference/get-provider-codes"
+      ]
     }
   ],
   "footerSocials": {
