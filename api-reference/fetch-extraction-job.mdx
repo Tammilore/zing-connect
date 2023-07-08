@@ -1,0 +1,24 @@
+---
+title: "Fetch Job"
+description: "Get an extraction job"
+api: "GET https://api.zingfi.co/extract/{job_id}"
+---
+
+## Parameters
+
+<ParamField path="job_id" type="string" required>
+  The base 64 string of the document
+</ParamField>
+
+
+<ResponseExample>
+
+```json Status 200
+{
+  "message": "Document processing started",
+  "status": "STARTED",
+  "job_id": "2f546..."
+}
+```
+
+</ResponseExample>
