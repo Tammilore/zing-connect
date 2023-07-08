@@ -7,46 +7,22 @@ api: "GET https://api.zingfi.co/extract/providers"
 <ResponseExample>
 
 ```json 200
-{
-  "date":"Tuesday, March 28, 2023 to Sunday, April 30, 2023",
-  "balance":685.24,
-  "total_debit":1092652.71,
-  "account_name":"OLUWATAMILORE ...",
-  "total_credit":1093204.96,
-  "transactions":[
-            {
-              "date":"28-MAR-23",
-              "debit":0,
-              "credit":4000,
-              "balance":4132.99,
-             "narration":"Transfer from SEMIRAH AJUMAH to OLUWATAMILORE"
-           },
-           {
-             "date":"31-MAR-23",
-             "debit":0.4,
-             "credit":0,
-             "balance":4132.59,
-             "narration":"WHT ON CREDIT INTEREST"
-           },
-           {
-             "date":"31-MAR-23",
-             "debit":0,
-             "credit":3.96,
-             "balance":4136.55,
-             "narration":"CREDIT INTEREST CAPITALIZATION"
-          },
-          {
-            "date":"03-APR-23",
-            "debit":0,
-            "credit":375,
-            "balance":4511.55,
-            "narration":"RIA/USD75.00/ACCOUNT/OLUWATAMILORE/CA66114219"
-          },
-          ...
-          ...
-              ],
-    "account_number":"07337...."
-}
+[
+  {
+    "name":"Access Bank",
+    "code":"044"
+  },
+  {
+    "name":"GTBank",
+    "code":"50211"
+  },
+  {
+    "name":"Kuda Bank",
+    "code":"50211"
+  }
+  ...
+  ...
+    ]
 ```
 
 </ResponseExample>
