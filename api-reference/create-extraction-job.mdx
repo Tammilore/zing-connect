@@ -14,6 +14,20 @@ api: "POST https://api.zingfi.co/extract/start"
   The code of the provider the document is from
 </ParamField>
 
+## Response Type
+
+<ResponseField name="message" type="string">
+      A generic message about the extraction
+    </ResponseField>
+
+    <ResponseField name="status" type="string">
+      The status of the job
+    </ResponseField>
+    
+    <ResponseField name="job_id" type="string">
+      The job_id for the document
+    </ResponseField>
+
 <ResponseExample>
 
 ```json Status 200
