@@ -1,0 +1,27 @@
+---
+title: "Create Job"
+description: "Start an extraction job"
+api: "POST https://api.zingfi.co/extract/start"
+---
+
+## Parameters
+
+<ParamField body="base64_string" type="string" required>
+  The base 64 string of the document
+</ParamField>
+
+<ParamField body="code" type="string" required>
+  The code of the provider the document is from
+</ParamField>
+
+<ResponseExample>
+
+```json Status 200
+{
+  "message": "Document processing started",
+  "status": "STARTED",
+  "job_id": "2f546..."
+}
+```
+
+</ResponseExample>
