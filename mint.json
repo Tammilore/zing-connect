@@ -79,7 +79,9 @@
       "pages": [
         "zing-extract/overview",
         "zing-extract/documents",
-        "zing-extract/pricing"
+        "zing-extract/pricing",
+        "zing-extract/limitations",
+        "zing-extract/contribute"
           ]
     },
     {
