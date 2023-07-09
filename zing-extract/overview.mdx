@@ -8,7 +8,9 @@ Here’s how it works:
 
 ## Step 1: Call the extract endpoint
 
-To run this endpoint, you only need the `base64_string` of the pdf file as well as the `code` for the provider the document was generated from. Eg If a bank statement was generated from Access Bank, you would need to provide the code for Access Bank. You can find the endpoint to fetch the full list of providers we currently support and their codes from the [API Reference](/api-reference/start-here).
+To run this endpoint, you only need the `base64_string` of the pdf file as well as the `code` for the provider the document was generated from. Eg If a bank statement was generated from Access Bank, you would need to provide the code for Access Bank. You can find the endpoint to fetch the full list of providers we currently support and their codes from the [API Reference](/api-reference/get-provider-codes).
+
+<Note>Authenticate your requests by [generating a token](/api-reference/generate-token) with your API key</Note>
 
 ```
 curl -X 'POST' \
