@@ -5,7 +5,7 @@
     "baseUrl": ["https://api.zingfi.co", "https://api-sandbox.zingfi.co"],
     "auth": { "method": "bearer" },
     "playground": {
-      "mode": "hide"
+      "mode": "show"
     }
   },
   "feedback": {
